@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Shop| Signin</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="manifest" href="../../manifest.json">    
+    
+</head>
+
+<body>
+    <!-- <header>
+        <a href="../../index.html">E-Shop</a>
+    </header>         -->
+
+    <div id="background-outer">
+        <div id="background-inner"></div>
+    </div>
+
+    <section>
+        <div class="container">
+            <form class="auth-form">
+                <div class="form-group">
+                    <h2 class="text-center">Login:</h2>
+                </div>
+                <div class="form-group">
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email...">
+                </div>
+                <div class="form-group">
+                    <label for="password">Enter your password:</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password...">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Login">
+                    <a href="signup.html">Don't have an account? Create here...</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="custom-modal">
+        <div class="custom-modal-header">
+            <button class="btn btn-danger" onClick="hideModal()">X</button>
+        </div>
+        <div class="custom-modal-body">Body</div>
+    </div>
+
+
+    <div class="custom-loader">
+        <img src="../images/loader.png" alt="loader">
+        <span>Text</span>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/signin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="manifest" href="../../manifest.json">    
+    <title>E-Shop| Submit Add</title>
+</head>
+
+<body onLoad="clearAdForm()">
+    <header>
+        <a href="../../index.html">E-Shop</a>
+        <button class="btn btn-primary" onClick="openMenu()">Menu</button>
+    </header>
+
+    <nav id="side-menu">
+        <ul class="list-group">
+            <li class="list-group-item text-center" style="display: flex;align-items: center;justify-content: space-between">
+                <span id="greet-user">User</span>
+                <span id="close-menu"><button class="btn btn-danger" onClick="closeMenu()">X</button></span>
+            </li>
+            <li class="list-group-item"><a href="../../index.html" class="btn btn-primary">Home</a></li>            
+            <li class="list-group-item"><a href="add.html" class="btn btn-primary">Submit your add</a></li>
+            <li class="list-group-item"><a href="save.html" class="btn btn-primary">Saved Ads</a></li>            
+            <li class="list-group-item"><a href="inbox.html" class="btn btn-primary">Inbox</a></li>
+            <li class="list-group-item"><button class="btn btn-danger" onClick="logout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <form class="my-3" onSubmit="return submitAdd()">
+                <div class="form-group">
+                    <label for="product-category">Select a category:</label>
+                    <select id="product-category" class="form-control">
+                        <option value="0" selected disabled>Select a Category:</option>
+                        <option value="mobile">Mobiles</option>
+                        <option value="electronic">Electronics</option>
+                        <option value="home appliance">Home Appliances</option>
+                        <option value="vehicle">Vehicles</option>
+                        <option value="bike">Bikes</option>
+                        <option value="property sale">Property for sale</option>
+                        <option value="property rent">Property for rent</option>
+                        <option value="job">Jobs</option>
+                        <option value="service">Services</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="decoration">Decoration</option>
+                        <option value="animal">Animals</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-name">Enter Product Name:</label>
+                    <input type="text" id="product-name" class="form-control" placeholder="Enter product name...">
+                </div>
+                <div class="form-group">
+                    <label for="product-model">Enter Product Model:</label>
+                    <input type="text" id="product-model" class="form-control" placeholder="Enter product model...">
+                </div>
+                <div class="form-group">
+                    <label for="product-description">Enter Product Description:</label>
+                    <textarea id="product-description" class="form-control" rows="5" placeholder="Enter product description..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-image">Upload an Image:</label>
+                    <input type="file" id="product-image" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Expected Price:</label>
+                    <input type="number" id="product-price" min="0" class="form-control" placeholder="Enter your expected price in $...">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="custom-modal">
+        <div class="custom-modal-header">
+            <button class="btn btn-danger" onClick="hideModal()">X</button>
+        </div>
+        <div class="custom-modal-body">Body</div>
+    </div>
+
+    <div class="custom-loader">
+        <img src="../images/loader.png" alt="loader">
+        <span>Text</span>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

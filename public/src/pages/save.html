@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="manifest" href="../../manifest.json">
+
+    <title>E-Shop| Save</title>
+</head>
+
+<body onLoad="renderSaveAds()">
+    <header>
+        <a href="../../index.html">E-Shop</a>
+        <button class="btn btn-primary" onClick="openMenu()">Menu</button>
+    </header>
+
+    <nav id="side-menu">
+        <ul class="list-group">
+            <li class="list-group-item text-center" style="display: flex;align-items: center;justify-content: space-between">
+                <span id="greet-user">User</span>
+                <span id="close-menu">
+                    <button class="btn btn-danger" onClick="closeMenu()">X</button>
+                </span>
+            </li>
+            <li class="list-group-item">
+                <a href="../../index.html" class="btn btn-primary">Home</a>
+            </li>
+            <li class="list-group-item">
+                <a href="../pages/add.html" class="btn btn-primary">Submit your add</a>
+            </li>
+            <li class="list-group-item">
+                <a href="save.html" class="btn btn-primary">Saved Ads</a>
+            </li>
+
+            <li class="list-group-item">
+                <a href="inbox.html" class="btn btn-primary">Inbox</a>
+            </li>
+            <li class="list-group-item">
+                <button class="btn btn-danger" onClick="logout()">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <h1 class="text-center">Your Saved Ads:</h1>
+            <div id="ads-container"></div>
+        </div>
+    </section>
+
+    <div class="custom-modal">
+        <div class="custom-modal-header">
+            <button class="btn btn-danger" onClick="hideModal()">X</button>
+        </div>
+        <div class="custom-modal-body">Body</div>
+    </div>
+
+    <div class="custom-loader">
+        <img src="../images/loader.png" alt="loader">
+        <span>Text</span>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

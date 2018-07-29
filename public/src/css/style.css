@@ -1,0 +1,357 @@
+/************************************************
+Developed by: Izaan jahangir 12752
+
+1) Other Css
+2) Home Page Css
+3) Message Page Css
+4) Signup & signin Page Css
+5) Inbox Page Css
+6) KeyFrames
+7) Media Queries
+************************************************/
+
+
+
+
+
+/**************** (1) Other Css *********************/
+
+:root {
+  --theme-color-dark: #f79f1f;
+  --theme-color-light: #fdcb6e;
+}
+.container {
+  padding: 0;
+  margin-top: 10px;
+}
+.form-control {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+select {
+  cursor: pointer;
+}
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--theme-color-dark);
+  padding: 0px 10px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  background: var(--theme-color-light);
+  width: 300px;
+  transition: all ease-in-out 1000ms;
+  opacity: 0;
+  transform: translateX(-575px);
+  z-index: 1000;
+}
+#side-menu .list-group-item {
+  background: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+#greet-user {
+  display: flex;
+  align-items: center;
+}
+.avatar-container {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%; 
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/avatar-default.png");
+}
+
+
+#background-outer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url("../images/pexels-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1000;
+}
+#background-inner {
+  height: inherit;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-modal {
+  height: 200px;
+  background: white;
+  width: 500px;
+  position: fixed;
+  left: 50%;
+  top: calc(50% - 100px);
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+.custom-modal-header {
+  height: 50px;
+  background: var(--theme-color-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+.custom-modal-body {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.custom-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-color-light);
+  height: 100px;
+  width: 200px;
+  display: none;
+  opacity: 0;
+  transition: all ease-in-out 500ms;
+  z-index: 1000;
+}
+.custom-loader img {
+  width: 50px;
+  animation: loading linear 500ms infinite forwards;
+}
+/* ************************************************* */
+
+
+
+/**************** (2) Home Page Css *********************/
+.container > form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#ads-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#search-label {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-card {
+  display: inline-block;
+  min-height: 400px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid black;
+  position: relative;
+  margin: 0 5px;
+}
+.custom-card-body {
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+}
+.fav-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 500;
+}
+.image-container {
+  height: 200px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.image-container img {
+  height: 100%;
+  width: auto;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.price-label {
+  position: absolute;
+  bottom: 0;
+  padding: 5px 20px;
+  color: white;
+  z-index: 500;
+}
+.custom-card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--theme-color-light);
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  display: none;
+  transition: all ease-in-out 500ms;
+  cursor: pointer;
+  z-index: 600;
+}
+/* ************************************************* */
+
+/**************** (3) Message Page Css *********************/
+
+#messages-section {
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+#messages-section > .container {
+  margin-bottom: 60px;
+}
+#message-form {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  padding: 5px;
+  background: white;
+  left: 0;
+  z-index: 900;
+}
+
+.message-outer {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.left-message-outer li {
+  background: #c8d6e5;
+}
+
+.right-message-outer span {
+  order: 1;
+}
+.right-message-outer li {
+  order: 0;
+  color: white;
+  background: #2e86de;
+}
+.avatar-message {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  background-image: url("../images/avatar-default.png");  
+}
+/* ************************************************* */
+
+/**************** (4) Signup & signin Page Css *********************/
+.auth-form {
+  margin-top: 50px;
+  width: 500px;
+  color: white;
+}
+.auth-form a {
+  color: white;
+}
+.auth-form a:hover {
+  color: white;
+}
+/* ************************************************* */
+
+/**************** (5) Inbox Page Css *********************/
+.message {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.message .left-content {
+  flex: 1;
+}
+
+#inbox-container > li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#inbox-container > li .left-content {
+  flex: 1;
+}
+
+/* ************************************************* */
+
+
+/*************** (6) Keyframes ***************/
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*************** (7) Media Queries *******************/
+@media (max-width: 767px) {
+  .custom-card {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+@media (max-width: 575px) {
+  .container > form {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .form-group a {
+    display: block;
+  }
+
+  .custom-modal {
+    width: 90%;
+  }
+  #side-menu {
+    width: 100%;
+  }
+}
