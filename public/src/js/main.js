@@ -1,14 +1,13 @@
 
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyAJYDuM8480KKsjcZrsTOO3cb4CjiJgGTg",
-    authDomain: "izaan-hackathon.firebaseapp.com",
-    databaseURL: "https://izaan-hackathon.firebaseio.com",
-    projectId: "izaan-hackathon",
-    storageBucket: "izaan-hackathon.appspot.com",
-    messagingSenderId: "29506462330"
-  };
-  firebase.initializeApp(config);
+/****************************************
+ ****************************************
+ 
+  Put your firebase configuration here 
+  i am not providing because of security issues
+  
+ ****************************************
+ ***************************************/
+
 
 const db = firebase.firestore();
 const auth = firebase.auth();
